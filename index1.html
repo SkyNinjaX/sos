@@ -1,0 +1,298 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Society of Sustainability — Bayelsa Case Study</title>
+    <meta name="description" content="Society of Sustainability — case study: Bayelsa State, Nigeria. Problems, causes and multidisciplinary solutions." />
+    <!-- Tailwind CDN (for quick prototyping) -->
+    <script src="./tw.js"></script>
+    <link
+rel="stylesheet"
+href="./leaflet.css"
+/>
+    <link
+rel="stylesheet"
+href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+
+	
+<script src="./leaflet.js"></script>
+    <style>
+      /* small custom styles for nicer toasts / cards */
+      .card-shadow{box-shadow:0 10px 25px rgba(2,6,23,0.08)}
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-900 leading-relaxed">
+    <header class="bg-white border-b">
+      <div class="max-w-6xl mx-auto flex items-center justify-between p-6">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-green-600 flex items-center justify-center text-white font-bold">S</div>
+          <div>
+            <h1 class="text-xl font-semibold">Society of Sustainability</h1>
+            <p class="text-xs text-gray-500">Case study: Bayelsa State, Nigeria</p>
+          </div>
+        </div>
+        <nav class="space-x-4 text-sm text-gray-600">
+          <a href="#vision" class="hover:underline">Vision & Mission</a>
+          <a href="#education" class="hover:underline">Education</a>
+          <a href="#industry" class="hover:underline">Industry & Infra</a>
+          <a href="#cities" class="hover:underline">Cities & Communities</a>
+          <a href="#climate" class="hover:underline">Climate Action</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto p-6 space-y-12">
+      <!-- Hero -->
+      <section class="bg-[url('./galaxy.avif')] bg-cover bg-center rounded-2xl text-white p-10">
+        <div class="backdrop-brightness-75 p-8 rounded-2xl">
+          <h2 class="text-3xl md:text-4xl font-extrabold leading-tight">Society of Sustainability</h2>
+          <p class="mt-3 max-w-2xl">Championing resilient communities in Bayelsa: research, advocacy and locally-rooted solutions across education, industry, infrastructure and climate action.</p>
+        </div>
+      </section>
+
+      <!-- Vision & Mission -->
+      <section id="vision" class="grid md:grid-cols-2 gap-6 items-start">
+        <div class="bg-white p-8 rounded-2xl card-shadow">
+          <h3 class="text-2xl font-semibold">Our Vision</h3>
+          <p class="mt-3 text-gray-700">A Bayelsa where coastal communities thrive with resilient infrastructure, inclusive quality education, sustainable livelihoods and a healthy environment — powered by informed citizens and partnerships that turn policy into local action.</p>
+
+          <h3 class="mt-6 text-2xl font-semibold">Our Mission</h3>
+          <p class="mt-3 text-gray-700">To partner with government, civil society, private sector and local communities to co-design and implement sustainable solutions that protect Bayelsa’s environment, uplift education standards, build resilient infrastructure and create inclusive economic opportunities.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl card-shadow">
+          <h4 class="text-lg font-semibold">Quick facts about Bayelsa (for context)</h4>
+          <ul class="mt-3 list-disc pl-5 text-gray-700 text-sm space-y-2">
+            <li>Low-lying Niger-Delta state with high flood risk and oil-industry impacts.</li>
+            <li>Significant oil pollution incidents and periodic infrastructure challenges.</li>
+            <li>Education access and quality are uneven — poverty and floods increase out-of-school rates.</li>
+          </ul>
+          <p class="mt-4 text-xs text-gray-400">Sources: local news reports, NGO and academic research (replace with formal citations on publication).</p>
+        </div>
+      </section>
+
+      <!-- Education section -->
+      <section id="education" class="bg-white p-8 rounded-2xl card-shadow">
+        <h3 class="text-2xl font-semibold">Problem: Quality Education</h3>
+        <p class="mt-2 text-gray-600">Case study focus: Bayelsa — overcrowded classrooms, damaged school infrastructure, teacher shortages, and climate-disrupted school calendars.</p>
+
+        <div class="mt-6 grid md:grid-cols-3 gap-4">
+          <!-- Image placeholders: replace src with real photos of Bayelsa classrooms / out-of-school children -->
+          <img src="./class1.jpg" alt="Damaged classroom Bayelsa" class="w-full h-48 object-cover rounded">
+          <img src="./class2.jpg" alt="Children outdoors learning Bayelsa" class="w-full h-48 object-cover rounded">
+          <img src="./empty.jpeg" alt="Empty school due to flood" class="w-full h-48 object-cover rounded">
+        </div>
+
+        <div class="mt-6 grid md:grid-cols-2 gap-6">
+          <div>
+            <h4 class="font-semibold">Causes</h4>
+            <ul class="list-disc pl-5 mt-2 text-gray-700 space-y-2">
+              <li>Poverty and household inability to pay school costs.</li>
+              <li>Floods damaging school buildings and interrupting sessions.</li>
+              <li>Insufficient qualified teachers and teaching materials.</li>
+              <li>Policy gaps and irregular funding for basic education.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold">Solutions </h4>
+            <ol class="list-decimal pl-5 mt-2 text-gray-700 space-y-2">
+              <li>Conditional cash transfers for vulnerable families tied to school attendance : reduces dropout by offsetting costs and opportunity cost of child labour.</li>
+              <li>School reconstruction funds prioritised using cost-benefit analysis : invest where returns on human capital are highest.</li>
+              <li>Local teacher recruitment & incentives plus continuous professional development : empower community oversight committees to monitor teacher attendance and quality.</li>
+              <li>Community-run disaster-resilient school designs : raised platforms and flood-resistant materials to reduce interruption costs.</li>
+              <li>Civic education programmes in schools and communities to promote parental engagement and demand for accountability over education budgets.</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- Industry, Innovation & Infrastructure -->
+      <section id="industry" class="bg-white p-8 rounded-2xl card-shadow">
+        <h3 class="text-2xl font-semibold">Problem: Industry, Innovation & Infrastructure</h3>
+        <p class="mt-2 text-gray-600">Bayelsa faces degraded roads, intermittent electricity, oil spills and damaged pipelines — all of which weaken local economic activity and innovation potential.</p>
+
+        <div class="mt-6 grid md:grid-cols-3 gap-4">
+          <img src="./road.jpg" alt="Bad road Bayelsa" class="w-full h-48 object-cover rounded">
+          <img src="./oilspill.jpg" alt="Pipeline oil spill" class="w-full h-48 object-cover rounded">
+          <img src="./blackout.jpg" alt="Small enterprise affected by blackout" class="w-full h-48 object-cover rounded">
+        </div>
+
+        <div class="mt-6 grid md:grid-cols-2 gap-6">
+          <div>
+            <h4 class="font-semibold">Causes</h4>
+            <ul class="list-disc pl-5 mt-2 text-gray-700 space-y-2">
+              <li>Legacy oil-industry pollution and pipeline vandalism causing environmental and economic damage.</li>
+              <li>Poor maintenance of roads and weak transport connectivity.</li>
+              <li>Unreliable power supply limiting manufacturing and services.</li>
+              <li>Low local investment in innovation or value-added industries.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold">Solutions </h4>
+            <ol class="list-decimal pl-5 mt-2 text-gray-700 space-y-2">
+              <li>Targeted infrastructure investment using spatial-priority mapping : fix key roads and bridges that unlock markets for many communities.</li>
+              <li>Public - private partnerships to rehabilitate pipelines and install community-level monitoring systems : reduce vandalism and speed up repairs.</li>
+              <li>Off-grid renewable microgrids for industrial clusters : reduce dependence on fragile central grid and power small businesses reliably.</li>
+              <li>Business incubation and microfinance for local entrepreneurs to encourage value-add : training in product development, market access, and bookkeeping.</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sustainable Cities & Communities -->
+      <section id="cities" class="bg-white p-8 rounded-2xl card-shadow">
+        <h3 class="text-2xl font-semibold">Problem: Sustainable Cities & Communities</h3>
+        <p class="mt-2 text-gray-600">Rapid urbanisation, poor waste management and housing issues (exacerbated by floods and oil pollution) threaten healthy, resilient communities in Bayelsa.</p>
+
+        <div class="mt-6 grid md:grid-cols-3 gap-4">
+          <img src="./flood1.jpg" alt="Flooded neighbourhood Bayelsa" class="w-full h-48 object-cover rounded">
+          <img src="./slums.jpeg" alt="Informal housing Bayelsa" class="w-full h-48 object-cover rounded">
+          <img src="./waste.jpg" alt="Waste pollution Bayelsa" class="w-full h-48 object-cover rounded">
+        </div>
+
+        <div class="mt-6 grid md:grid-cols-2 gap-6">
+          <div>
+            <h4 class="font-semibold">Causes</h4>
+            <ul class="list-disc pl-5 mt-2 text-gray-700 space-y-2">
+              <li>Poor urban planning and weak enforcement of building codes.</li>
+              <li>Inadequate waste collection and sanitation systems.</li>
+              <li>Housing shortages leading to informal settlements in flood-prone areas.</li>
+              <li>Environmental degradation from oil pollution.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold">Solutions </h4>
+            <ol class="list-decimal pl-5 mt-2 text-gray-700 space-y-2">
+              <li>Participatory urban planning: involve communities to map flood-prone zones and re-locate essential facilities to safer elevations .</li>
+              <li>Invest in simple, scalable sanitation and waste-collection enterprises that create jobs : small waste-to-compost or recycling businesses can provide livelihoods and reduce waste.</li>
+              <li>Introduce incremental housing finance and micro-construction grants : enable families to upgrade existing homes and build flood-resistant foundations.</li>
+              <li>Local bylaws and civic education campaigns on sanitation and proper waste disposal : change behaviour while strengthening enforcement.
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- Climate Action -->
+      <section id="climate" class="bg-white p-8 rounded-2xl card-shadow">
+        <h3 class="text-2xl font-semibold">Problem: Climate Action</h3>
+        <p class="mt-2 text-gray-600">Bayelsa is highly vulnerable to sea-level rise, coastal erosion and extreme flooding — climate change intensifies these risks.</p>
+
+        <div class="mt-6 grid md:grid-cols-3 gap-4">
+          <img src="./coastalerosion.jpg" alt="Coastal erosion Bayelsa" class="w-full h-48 object-cover rounded">
+          <img src="./flood2.jpeg" alt="Flooded community Bayelsa" class="w-full h-48 object-cover rounded">
+          <img src="./mangrove.jpg" alt="Mangrove degradation Bayelsa" class="w-full h-48 object-cover rounded">
+        </div>
+
+        <div class="mt-6 grid md:grid-cols-2 gap-6">
+          <div>
+            <h4 class="font-semibold">Causes</h4>
+            <ul class="list-disc pl-5 mt-2 text-gray-700 space-y-2">
+              <li>Rising sea levels, unpredictable rain patterns and stronger storms (global climate change).</li>
+              <li>Loss of protective mangroves and wetlands due to pollution and development.</li>
+              <li>Poor land-use planning putting people in high-risk zones.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold">Solutions</h4>
+            <ol class="list-decimal pl-5 mt-2 text-gray-700 space-y-2">
+              <li>Mangrove restoration and coastal buffer projects : nature-based solutions that provide storm protection and livelihoods (nurseries, eco-tourism).</li>
+              <li>Community early-warning systems and flood-resilient shelter programmes : train local volunteers, provide evacuation plans and safe high-ground shelters.</li>
+              <li>Integrate climate risks into all planning and investment decisions — use simple GIS risk maps to prioritise interventions.</li>
+              <li>Promote low-carbon local enterprises (e.g., solar for households and businesses) with microfinance support.</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive Map Section -->
+    <section class="bg-gray-100 py-12 px-6">
+<div class="max-w-6xl mx-auto text-center">
+<h2 class="text-3xl font-bold text-green-700 mb-6">
+Interactive Bayelsa Case Study Map
+</h2>
+<p class="text-lg mb-4">
+Explore major sustainability challenges and local initiatives across
+Bayelsa State.
+</p>
+<div id="map" class="h-96 rounded-2xl shadow-lg"></div>
+</div>
+</section>
+
+      <!-- Call to Action -->
+      <section class="bg-white p-8 rounded-2xl text-center card-shadow">
+        <h3 class="text-2xl font-semibold">Get Involved</h3>
+        <p class="mt-3 text-gray-700">If you're in Bayelsa or working on Niger Delta issues, join our data-collection drives, education clubs, and advocacy campaigns. Small local actions scale.</p>
+        <div class="mt-4 flex justify-center gap-3">
+          <a href="#" class="px-6 py-2 rounded-full bg-green-600 text-white font-semibold">Volunteer</a>
+          <a href="#" class="px-6 py-2 rounded-full border border-gray-200">Donate</a>
+        </div>
+      </section>
+
+      <!-- <footer class="text-center text-sm text-gray-500 py-6">© 2025 Society of Sustainability | Built by
+        <span class="font-semibold">𝔻𝕠𝕠𝕞𝕫𝕖𝕖</span></footer> -->
+        <footer class="text-center py-8 border-t border-gray-200 mt-12">
+            <div class="flex flex-row items-center justify-center space-y-3">
+              <img src="./d.png" alt="𝔻𝕠𝕠𝕞𝕫𝕖𝕖 Logo" class="h-10 w-auto opacity-80 rounded-xl hover:opacity-100 px-3 transition" />
+              <p class="text-m text-gray-500">
+                © <span id="year"></span> Society of Sustainability — Bayelsa Case Study. Designed by <strong>𝔻𝕠𝕠𝕞𝕫𝕖𝕖</strong>
+              </p>
+            </div>
+            <script>
+              document.getElementById('year').textContent = new Date().getFullYear();
+            </script>
+          </footer>
+          
+    </main>
+
+    <!-- notes
+      - Replace images in the `images/` folder with actual photos: education-1.jpg, industry-1.jpg, etc.
+      - Use the images collected from local news/NGO reports and credit sources below each image if publishing.
+      - This is a static prototype using Tailwind CDN for quick editing; for production, compile Tailwind and optimise images.
+    -->
+    <script>
+        const map = L.map('map').setView([4.937, 6.264], 8);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        const markers = [
+        {
+            coords: [4.9267, 6.2676],
+            title: 'Yenagoa - Flood-prone area',
+            desc: 'Frequent flooding due to low elevation and poor drainage.'
+        },
+        {
+            coords: [4.545, 6.322],
+            title: 'Nembe - Oil Spill Zone',
+            desc: 'Oil exploration leading to water contamination.'
+        },
+        {
+            coords: [4.900, 6.100],
+            title: 'Ogbia - Education Challenges',
+            desc: 'Damaged school structures and teacher shortages.'
+        },
+        {
+            coords: [4.97, 6.12],
+            title: 'Amassoma - Poor Roads',
+            desc: 'Bad transport infrastructure affecting trade.'
+        },
+        {
+            coords: [5.050, 6.45],
+            title: 'Sagbama - Sustainable Project',
+            desc: 'Community-led tree planting and recycling efforts.'
+        }
+        ];
+
+        markers.forEach(m => {
+        L.marker(m.coords).addTo(map).bindPopup(`<b>${m.title}</b><br>${m.desc}`);
+        });
+    </script>
+  </body>
+</html>

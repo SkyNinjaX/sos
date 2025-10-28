@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Society of Sustainability</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <script src="./https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <header class="bg-green-700 text-white py-6 text-center">
+      <h1 class="text-4xl font-bold">Society of Sustainability</h1>
+      <p class="text-lg mt-2">Bayelsa State, Nigeria Case Study</p>
+    </header>
+
+    <section class="max-w-5xl mx-auto py-12 px-6">
+      <h2 class="text-3xl font-bold mb-4 text-green-700">Our Vision</h2>
+      <p class="mb-6 text-lg">
+        To create a future where Bayelsa becomes a model for sustainable
+        development — balancing human progress, environmental health, and
+        economic growth.
+      </p>
+
+      <h2 class="text-3xl font-bold mb-4 text-green-700">Our Mission</h2>
+      <p class="text-lg">
+        To partner with communities, organizations, and government bodies to
+        achieve a sustainable Bayelsa through education, innovation,
+        infrastructure development, and climate action.
+      </p>
+    </section>
+
+    <section class="bg-white py-12 px-6">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-3xl font-bold text-green-700 mb-6">
+          Quality Education
+        </h2>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Nigerian_primary_school_children.jpg"
+          alt="Bayelsa education problems"
+          class="rounded-xl shadow mb-4"
+        />
+        <h3 class="text-xl font-semibold mb-2">Causes:</h3>
+        <ul class="list-disc pl-6 mb-4">
+          <li>Poor funding for rural schools</li>
+          <li>Inadequate teacher training</li>
+          <li>Flooding damaging school facilities</li>
+        </ul>
+        <h3 class="text-xl font-semibold mb-2">Solutions (Economics & Civic):</h3>
+        <ul class="list-disc pl-6">
+          <li>Encourage public-private partnerships for education funding</li>
+          <li>Community-led school rebuilding and maintenance initiatives</li>
+          <li>Scholarship and volunteer programs for rural learners</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="bg-gray-100 py-12 px-6">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-3xl font-bold text-green-700 mb-6">
+          Industry, Innovation & Infrastructure
+        </h2>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/5/52/Nembe_Oil_Spill.jpg"
+          alt="Bayelsa oil industry issues"
+          class="rounded-xl shadow mb-4"
+        />
+        <h3 class="text-xl font-semibold mb-2">Causes:</h3>
+        <ul class="list-disc pl-6 mb-4">
+          <li>Oil pollution affecting livelihoods</li>
+          <li>Poor road networks limiting access to markets</li>
+          <li>Lack of industrial diversification</li>
+        </ul>
+        <h3 class="text-xl font-semibold mb-2">
+          Solutions (Geography, Economics, Commerce):
+        </h3>
+        <ul class="list-disc pl-6">
+          <li>Develop sustainable road and bridge projects</li>
+          <li>Promote clean-tech and small-scale industries</li>
+          <li>Encourage youth entrepreneurship in renewable sectors</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="bg-white py-12 px-6">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-3xl font-bold text-green-700 mb-6">
+          Sustainable Cities & Communities
+        </h2>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Flooding_in_Yenagoa.jpg"
+          alt="Flooding in Bayelsa"
+          class="rounded-xl shadow mb-4"
+        />
+        <h3 class="text-xl font-semibold mb-2">Causes:</h3>
+        <ul class="list-disc pl-6 mb-4">
+          <li>Unplanned urban growth</li>
+          <li>Inadequate waste management</li>
+          <li>Frequent flooding due to low elevation</li>
+        </ul>
+        <h3 class="text-xl font-semibold mb-2">
+          Solutions (Geography, Economics, Commerce, Catering, Civic):
+        </h3>
+        <ul class="list-disc pl-6">
+          <li>Promote flood-resilient housing designs</li>
+          <li>Establish local recycling businesses</li>
+          <li>Train youths in catering and urban food sustainability</li>
+          <li>Encourage civic participation in city planning</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Interactive Map Section -->
+    <section class="bg-gray-100 py-12 px-6">
+      <div class="max-w-6xl mx-auto text-center">
+        <h2 class="text-3xl font-bold text-green-700 mb-6">
+          Interactive Bayelsa Case Study Map
+        </h2>
+        <p class="text-lg mb-4">
+          Explore major sustainability challenges and local initiatives across
+          Bayelsa State.
+        </p>
+        <div id="map" class="h-96 rounded-2xl shadow-lg"></div>
+      </div>
+    </section>
+
+    <section class="bg-white py-12 px-6">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-3xl font-bold text-green-700 mb-6">Climate Action</h2>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/7/73/Oil_spill_Niger_Delta.jpg"
+          alt="Oil spill in Bayelsa"
+          class="rounded-xl shadow mb-4"
+        />
+        <h3 class="text-xl font-semibold mb-2">Causes:</h3>
+        <ul class="list-disc pl-6 mb-4">
+          <li>Gas flaring and oil pollution</li>
+          <li>Deforestation and land degradation</li>
+          <li>High dependence on fossil fuels</li>
+        </ul>
+        <h3 class="text-xl font-semibold mb-2">Solutions (All Subjects):</h3>
+        <ul class="list-disc pl-6">
+          <li>Invest in renewable energy education</li>
+          <li>Encourage tree planting and mangrove restoration</li>
+          <li>Adopt strict laws against environmental pollution</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="bg-green-700 text-white text-center py-6 mt-12">
+      <p>
+        © 2025 Society of Sustainability | Built by
+        <span class="font-semibold">𝔻𝕠𝕠𝕞𝕫𝕖𝕖</span>
+      </p>
+    </footer>
+
+    <script>
+      const map = L.map('map').setView([4.937, 6.264], 8);
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+      }).addTo(map);
+
+      const markers = [
+        {
+          coords: [4.9267, 6.2676],
+          title: 'Yenagoa - Flood-prone area',
+          desc: 'Frequent flooding due to low elevation and poor drainage.'
+        },
+        {
+          coords: [4.545, 6.322],
+          title: 'Nembe - Oil Spill Zone',
+          desc: 'Oil exploration leading to water contamination.'
+        },
+        {
+          coords: [4.900, 6.100],
+          title: 'Ogbia - Education Challenges',
+          desc: 'Damaged school structures and teacher shortages.'
+        },
+        {
+          coords: [4.97, 6.12],
+          title: 'Amassoma - Poor Roads',
+          desc: 'Bad transport infrastructure affecting trade.'
+        },
+        {
+          coords: [5.050, 6.45],
+          title: 'Sagbama - Sustainable Project',
+          desc: 'Community-led tree planting and recycling efforts.'
+        }
+      ];
+
+      markers.forEach(m => {
+        L.marker(m.coords).addTo(map).bindPopup(`<b>${m.title}</b><br>${m.desc}`);
+      });
+    </script>
+  </body>
+</html>
